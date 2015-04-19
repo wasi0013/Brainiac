@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/gradiant"
+    >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Help"
+        android:textAppearance="?android:attr/textAppearanceLarge" 
+        android:gravity = "center"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="This is a Brain teasing game to test your memorizing skills.\n\nGamePLay\nClick on the ready! button whenever you are ready.Wait for the pattern to disappear to the left. When it completely goes off the screen try to press the matching buttons sequentially. Failed to match the sequence will result in Game Over.\n\nChange Profile\n Write different names to play as different users\n\n\nScore\nScores are distributed level wise the higher the level the higher you will score."
+        android:textAppearance="?android:attr/textAppearanceSmall" 
+        android:gravity="center"
+        />
+
+  
+
+</LinearLayout>
