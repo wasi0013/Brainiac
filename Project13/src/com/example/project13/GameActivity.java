@@ -71,9 +71,9 @@ public class GameActivity extends Activity implements OnClickListener{
 		Cursor cursor =gameDB.getAllPlayer();
  		cursor.moveToFirst();
  		do{
- 			String name=cursor.getString(cursor.getColumnIndex(gameDB.PLAYER_NAME));
+ 			String name=cursor.getString(cursor.getColumnIndex(DataHandler.PLAYER_NAME));
  			if(user.equals(name)){
- 				highScore =cursor.getInt(cursor.getColumnIndex(gameDB.PLAYER_SCORE));
+ 				highScore =cursor.getInt(cursor.getColumnIndex(DataHandler.PLAYER_SCORE));
      			break;
  			}	
  		}while(cursor.moveToNext());
@@ -123,7 +123,7 @@ public class GameActivity extends Activity implements OnClickListener{
 			 		}
 			 textView2.setText("score: " + score);
 			 
-			 //twing
+			 //twing sounds
 			 mediaPlayer.start();
 			 
 			 finish();
@@ -218,7 +218,6 @@ public class GameActivity extends Activity implements OnClickListener{
 	
 	}
 	
-	//game logic
 	
 	
 	public String getPattern(int length){

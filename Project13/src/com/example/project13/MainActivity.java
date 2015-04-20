@@ -11,7 +11,6 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -50,7 +49,6 @@ public class MainActivity extends ActionBarActivity {
 		    alert.setView(userName);
 		    alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 		    public void onClick(DialogInterface dialog, int whichButton) {
-		     //What ever you want to do with the value
 		    	if(userName.getText().toString().length()==0){
 			    	 Toast.makeText(getApplicationContext(), "Invalid Username!", Toast.LENGTH_SHORT).show();
 			    	 
@@ -143,7 +141,7 @@ public class MainActivity extends ActionBarActivity {
 			    			cursor.moveToFirst();
 			    			do
 			    			{
-			    				String name=cursor.getString(cursor.getColumnIndex(gameDb.PLAYER_NAME));
+			    				String name=cursor.getString(cursor.getColumnIndex(DataHandler.PLAYER_NAME));
 			    				if(user.equals(name)){
 			    					isExist=true;
 			    					break;

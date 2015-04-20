@@ -11,6 +11,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 public class HighScoreActivity extends Activity {
+	
 	List <String> scores = new ArrayList<String>();
 	DataHandler gameDB;
 	ListView list;
@@ -30,8 +31,8 @@ public class HighScoreActivity extends Activity {
 		counter=1;
 		do
 		{
-			String name=cursor.getString(cursor.getColumnIndex(gameDB.PLAYER_NAME));
-			String score=cursor.getString(cursor.getColumnIndex(gameDB.PLAYER_SCORE));
+			String name=cursor.getString(cursor.getColumnIndex(DataHandler.PLAYER_NAME));
+			String score=cursor.getString(cursor.getColumnIndex(DataHandler.PLAYER_SCORE));
 			scores.add(counter+". "+name+": "+score);
 			counter+=1;
 		}
